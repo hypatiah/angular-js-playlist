@@ -32,6 +32,12 @@ var myNinjaryApp = angular.module('myNinjaApp', []);
 
 // ng-include directive, brings in html from another file and dumps where need it
 myNinjaryApp.controller('NinjaController', ['$scope', function($scope){
+  $scope.removeNinja = function(ninja){
+    var removedNinja = $scope.ninjas.indexOf(ninja);
+    // go into ninjas arr. go to the removedNinja place, and remove 1 element
+    $scope.ninjas.splice(removedNinja, 1);
+  }
+
   $scope.ninjas = [
     {
       name: "Yoshi",
