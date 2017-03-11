@@ -36,7 +36,21 @@ myNinjaryApp.controller('NinjaController', ['$scope', function($scope){
     var removedNinja = $scope.ninjas.indexOf(ninja);
     // go into ninjas arr. go to the removedNinja place, and remove 1 element
     $scope.ninjas.splice(removedNinja, 1);
-  }
+  };
+
+  $scope.addNinja = function(){
+    $scope.ninjas.push({
+      name: $scope.newninja.name,
+      belt: $scope.newninja.belt,
+      rate: parseInt($scope.newninja.rate),
+      car: true
+    });
+
+    //clear entries after entering form
+    $scope.newninja.name = "";
+    $scope.newninja.belt = "";
+    $scope.newninja.rate = "";
+  };
 
   $scope.ninjas = [
     {
