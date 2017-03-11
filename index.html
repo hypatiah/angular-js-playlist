@@ -16,10 +16,12 @@
         <button ng-click="order = 'belt'">Order by belt</button>
         <input type="text" ng-model="search" placeholder="Search for a ninja"/>
         <ul>
-          <li ng-repeat="ninja in ninjas | orderBy: order | filter: search" ng-show="ninja.car">{{ninja.name}} - <h3>{{ninja.rate | currency: '$'}}</h3>
+          <li ng-repeat="ninja in ninjas | orderBy: order | filter: search" ng-show="ninja.car">
+            <img ng-src="{{ninja.thumb}}" alt="thumb" style="margin: -12px 10px 0 0; float: left; width: 50px;" ng-show="ninja.thumb">
+            <h3>{{ninja.name}} - {{ninja.rate | currency: '$'}}</h3>
             <!-- fire off function removeNinja in scope in controller when click -->
             <div class="remove" ng-click="removeNinja(ninja)">x</div>
-          <span class="belt" style="background: {{ninja.belt}}">{{ninja.belt}} belt</span>
+            <span class="belt" style="background: {{ninja.belt}}">{{ninja.belt}} belt</span>
           </li>
         </ul>
         <form ng-submit="addNinja()">

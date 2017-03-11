@@ -57,25 +57,29 @@ myNinjaryApp.controller('NinjaController', ['$scope', function($scope){
       name: "Yoshi",
       belt: "green",
       rate: 50,
-      car: true
+      car: true,
+      thumb: "content/img/yoshi.png"
     },
     {
       name: "Crystal",
       belt: "yellow",
       rate: 30,
-      car: true
+      car: true,
+      thumb: "content/img/yoshi.png"
     },
     {
       name: "Lola",
       belt: "orange",
       rate: 20,
-      car: false
+      car: false,
+      thumb: "content/img/yoshi.png"
     },
     {
       name: "Yoda",
       belt: "black",
       rate: 1000,
-      car: true
+      car: true,
+      thumb: "content/img/yoshi.png"
     }
   ];
 
